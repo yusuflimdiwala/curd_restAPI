@@ -7,10 +7,8 @@ import com.example.curd.repository.ItemRepository;
 
 @Service
 public class ItemService {
-	
+
 	@Autowired
 	private ItemRepository itemRepository;
-	
-	
 
 }

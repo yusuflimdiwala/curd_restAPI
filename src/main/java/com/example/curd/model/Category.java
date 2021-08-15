@@ -1,22 +1,13 @@
 package com.example.curd.model;
 
-import java.util.Map;
-import java.util.jar.Attributes;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.RepresentationModel;
-
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "categories")
@@ -24,6 +15,7 @@ public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "category_Id")
 	private long categoryId;
 
 	@Column(name = "Name", nullable = false)
@@ -71,8 +63,6 @@ public class Category {
 		this.attribute = attribute;
 	}
 
-	 
-	
 	public long getCategoryId() {
 		return categoryId;
 	}
@@ -82,9 +72,5 @@ public class Category {
 		return "Category [categoryId=" + categoryId + ", name=" + name + ", description=" + description + ", attribute="
 				+ attribute + "]";
 	}
-
-	
-
-
 
 }

@@ -10,24 +10,20 @@ import com.example.curd.repository.CatergoryRepository;
 
 @Service
 public class Catergoryservice {
-	
+
 	@Autowired
 	private CatergoryRepository categoryRepositrory;
 
 	public Category save(Category newCategory) {
-		
-		
-		return categoryRepositrory.save(newCategory) ;
-		
+
+		return categoryRepositrory.save(newCategory);
+
 	}
 
 	public List<Category> findCategories() {
-		
-		return categoryRepositrory.findAll();
-		
-	}
 
-	
-	
+		return categoryRepositrory.findAll();
+
+	}
 
 }

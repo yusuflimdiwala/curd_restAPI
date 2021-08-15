@@ -2,18 +2,14 @@ package com.example.curd.model;
 
 import java.net.URL;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import javax.persistence.Id;
 
 @Entity
 @Table(name = "items")
@@ -25,7 +21,7 @@ public class Item {
 	private Long itemId;
 
 	@ManyToOne
-	@JoinColumn(name = "categoryId")
+	@JoinColumn(name = "category_Id")
 	private Category categoryId;
 
 	@Column(name = "number")
@@ -84,7 +80,6 @@ public class Item {
 	public void setUrl(URL url) {
 		this.url = url;
 	}
-	
 
 	public Long getItemId() {
 		return itemId;
