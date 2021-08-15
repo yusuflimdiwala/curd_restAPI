@@ -120,6 +120,11 @@ api/v1/categories method Get
 ## how to test this 
  please run CurdApplication.java file as java application 
  
+ 
+ ## Database information 
+to test this application i am using h2 db, at this point i have not added code to populate DB. DB will be populated once category is created successfully. 
+
+ 
 ## License
 MIT
 
